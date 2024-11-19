@@ -1,0 +1,48 @@
+2024-11-13 18:54:11 INFO Entering email.
+2024-11-13 18:54:11 INFO Entering password.
+2024-11-13 18:54:11 INFO Clicking the submit button.
+2024-11-13 18:54:24 INFO Entering OTP into the boxes
+2024-11-13 18:54:26 INFO Entered OTP successfully - Testcase 1.5 is passed
+2024-11-13 18:54:36 INFO Searching the idea
+2024-11-13 18:54:42 INFO Successfully entered value ion the search field - Testcase 1.1 is passed
+2024-11-13 18:54:45 INFO Navigating to the idea tab
+2024-11-13 18:54:47 INFO Successfully moved in to the idea tab - Testcase 1.2 is passed
+2024-11-13 18:54:47 INFO Clicking on the idea card
+2024-11-13 18:54:57 INFO Successfully clicked in the idea - Testcase 1.3 is passed
+2024-11-13 18:54:57 INFO Navigating to the new tab
+2024-11-13 18:54:57 INFO Successfully moved in top the new tab - Testcase 1.4 is passed
+2024-11-13 18:54:57 INFO Searching a tagged product with title
+2024-11-13 18:55:05 INFO Successfully searched the term - Testcase 1.5 is passed
+2024-11-13 18:55:05 INFO Navigating to the idea tab
+2024-11-13 18:55:07 INFO Successfully moved in to the idea tab - Testcase 1.6 is passed
+2024-11-13 18:55:07 INFO Searching a tagged product with keyword
+2024-11-13 18:55:07 ERROR Element not found:{e}
+2024-11-13 18:55:07 INFO Navigating to the idea tab
+2024-11-13 18:55:09 INFO Successfully moved in to the idea tab - Testcase 1.7 is passed
+2024-11-13 18:55:09 INFO Searching a tagged product with L1- Category title
+2024-11-13 18:55:13 ERROR Element not found:{e}
+2024-11-13 18:55:13 INFO Navigating to the idea tab
+2024-11-13 18:55:15 INFO Successfully moved in to the idea tab - Testcase 1.9 is passed
+2024-11-13 18:55:15 INFO Searching a tagged product with L1- Keyword
+2024-11-13 18:55:19 ERROR Element not found:{e}
+2024-11-13 18:55:19 INFO Navigating to the idea tab
+2024-11-13 18:55:21 INFO Successfully moved in to the idea tab - Testcase 1.11 is passed
+2024-11-13 18:55:21 INFO Searching a tagged product with L2- Title
+2024-11-13 18:55:25 ERROR Element not found:{e}
+2024-11-13 18:55:25 INFO Navigating to the idea tab
+2024-11-13 18:55:27 INFO Successfully moved in to the idea tab - Testcase 1.13 is passed
+2024-11-13 18:55:27 INFO Searching a tagged product with L2- Keyword
+2024-11-13 18:55:31 ERROR Element not found:{e}
+2024-11-13 18:55:31 INFO Navigating to the idea tab
+2024-11-13 18:55:33 INFO Successfully moved in to the idea tab - Testcase 1.15 is passed
+2024-11-13 18:55:33 INFO Searching a tagged product with L3- Title
+2024-11-13 18:55:38 ERROR Element not found:{e}
+2024-11-13 18:55:38 INFO Navigating to the idea tab
+2024-11-13 18:55:40 INFO Successfully moved in to the idea tab - Testcase 1.17 is passed
+2024-11-13 18:55:40 INFO Searching a tagged product with L3- Keyword
+2024-11-13 18:55:43 ERROR Element not found:{e}
+2024-11-13 18:55:43 INFO Navigating to the idea tab
+2024-11-13 18:55:45 INFO Successfully moved in to the idea tab - Testcase 1.17 is passed
+2024-11-13 18:55:45 INFO Sending mail
+2024-11-13 18:55:49 INFO Successfully email sent - Testcase 1.19 is passed
+2024-11-13 18:55:49 INFO Tearing down the WebDriver.
