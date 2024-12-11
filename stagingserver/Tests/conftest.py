@@ -20,39 +20,40 @@ def setup(request):
 
     driver.delete_all_cookies()
     driver.maximize_window()
-    driver.get("https://fedstage.buildingworld.com/tempLogin")
+    driver.get("https://fedstage.buildingworld.com/")
+    time.sleep(3)
 
-    try:
-        logger.info("Entering email.")
-        email_field = WebDriverWait(driver, 10).until(
-            BD.presence_of_element_located((By.XPATH, "//input[@id='Username']"))
-        )
-        email_field.send_keys("buildingworld")
-
-        logger.info("Entering password.")
-        password_field = WebDriverWait(driver, 10).until(
-            BD.presence_of_element_located((By.XPATH, "//input[@id='Password']"))
-        )
-        password_field.send_keys("B2RaW")
-
-        logger.info("Clicking the submit button.")
-        submit_button = WebDriverWait(driver, 10).until(
-            BD.element_to_be_clickable((By.XPATH, "//button[normalize-space()='Submit']"))
-        )
-        submit_button.click()
-
-        # Wait for the login to complete, increase sleep duration if needed
-        time.sleep(3)
-    except Exception as e:
-        logger.error(f"An error occurred during login: {e}")
-        driver.quit()
-        raise
-
+    # try:
+    #     logger.info("Entering email.")
+    #     email_field = WebDriverWait(driver, 10).until(
+    #         BD.presence_of_element_located((By.XPATH, "//input[@id='Username']"))
+    #     )
+    #     email_field.send_keys("BuildingWorld")
+    #
+    #     logger.info("Entering password.")
+    #     password_field = WebDriverWait(driver, 10).until(
+    #         BD.presence_of_element_located((By.XPATH, "//input[@id='Password']"))
+    #     )
+    #     password_field.send_keys("1234")
+    #
+    #     logger.info("Clicking the submit button.")
+    #     submit_button = WebDriverWait(driver, 10).until(
+    #         BD.element_to_be_clickable((By.XPATH, "//button[normalize-space()='Submit']"))
+    #     )
+    #     submit_button.click()
+    #
+    #     # Wait for the login to complete, increase sleep duration if needed
+    #     time.sleep(3)
+    # except Exception as e:
+    #     logger.error(f"An error occurred during login: {e}")
+    #     driver.quit()
+    #     raise
+    #
     request.cls.driver = driver
     yield driver
-
-    logger.info("Tearing down the WebDriver.")
-    driver.quit()
+    #
+    # logger.info("Tearing down the WebDriver.")
+    # driver.quit()
 
 
 @pytest.fixture(scope='class')

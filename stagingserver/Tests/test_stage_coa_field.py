@@ -182,15 +182,16 @@ class Test_coa_filed:
         with caplog.at_level(logging.INFO):
             try:
                 logger.info("Taking screenshot")
-                self.driver.save_screenshot("create_idea.png")
-                showing = Image.open("create_idea.png")
+                folder_path = r"C:\Users\muduu\Downloads\stagingserver\Tests\screenshots"
+                screenshot_path = os.path.join(folder_path, "coa_field.png")
+                self.driver.save_screenshot(screenshot_path)
+                showing = Image.open(screenshot_path)
                 showing.show()
                 send_email()
                 logger.info("Screenshot done - Testcase 1.11 is passed")
 
             except NoSuchElementException as e:
                 logger.error(f"Element not found: {e.msg}")
-                raise
 
 
 

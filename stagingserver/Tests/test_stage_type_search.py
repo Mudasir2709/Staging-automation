@@ -146,13 +146,14 @@ class TestTypeSearch:
                 self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
                 time.sleep(3)
 
-                # Screenshot
-                logging.info("Taking screenshot")
-                self.driver.save_screenshot("type_search.png")
-                showing = Image.open("type_search.png")
+                logger.info("Taking screenshot")
+                folder_path = r"C:\Users\muduu\Downloads\stagingserver\Tests\screenshots"
+                screenshot_path = os.path.join(folder_path, "type_search.png")
+                self.driver.save_screenshot(screenshot_path)
+                showing = Image.open(screenshot_path)
                 showing.show()
                 send_email()
-                logging.info("Screenshot done - Testcase 1.8 is passed")
+                logger.info("Screenshot done - Testcase 1.2 is passed")
 
             except (TimeoutException, StaleElementReferenceException) as e:
                 logging.error(f"Exception occurred: {e}")

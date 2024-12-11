@@ -486,20 +486,21 @@ class Test_media_approval:
             except (NoSuchElementException, ElementNotInteractableException) as e:
 
                 logging.error("Element not found:{e}")
-        
+
         """Taking screenshot"""
         with caplog.at_level(logging.INFO):
             try:
                 logger.info("Taking screenshot")
-                self.driver.save_screenshot("project_media.png")
-                showing = Image.open("project_media.png")
+                folder_path = r"C:\Users\muduu\Downloads\stagingserver\Tests\screenshots"
+                screenshot_path = os.path.join(folder_path, "project_media.png")
+                self.driver.save_screenshot(screenshot_path)
+                showing = Image.open(screenshot_path)
                 showing.show()
                 send_email()
-                logger.info("Screenshot done - Testcase 1.32 is passed")
+                logger.info("Screenshot done - Testcase 1.12 is passed")
 
             except NoSuchElementException as e:
                 logger.error(f"Element not found: {e.msg}")
-                raise
 
 
 

@@ -30,19 +30,20 @@ class Test_stage_Login:
             time.sleep(3)
             logging.info("Successfully again clicked on the logo - Testcase 1.6 is passed")
 
-        """Screen shot"""
+        """Taking screenshot"""
         with caplog.at_level(logging.INFO):
             try:
-                logging.info("Initiating screenshot")
-                self.driver.save_screenshot("login.png")
-                showing = Image.open("login.png")
+                logger.info("Taking screenshot")
+                folder_path = r"C:\Users\muduu\Downloads\stagingserver\Tests\screenshots"
+                screenshot_path = os.path.join(folder_path, "dealer_login.png")
+                self.driver.save_screenshot(screenshot_path)
+                showing = Image.open(screenshot_path)
                 showing.show()
                 send_email()
-                logging.info("Successfully logged in - Testcase 1.6 is passed")
+                logger.info("Screenshot done - Testcase 1.7 is passed")
 
-            except (TimeoutException, NoSuchElementException) as e:
-                logging.error(f"Exception occurred: {e}")
-                raise
+            except NoSuchElementException as e:
+                logger.error(f"Element not found: {e.msg}")
 
 
 

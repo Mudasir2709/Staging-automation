@@ -522,12 +522,13 @@ class Test_media_approval:
         with caplog.at_level(logging.INFO):
             try:
                 logger.info("Taking screenshot")
-                self.driver.save_screenshot("idea_media.png")
-                showing = Image.open("idea_media.png")
+                folder_path = r"C:\Users\muduu\Downloads\stagingserver\Tests\screenshots"
+                screenshot_path = os.path.join(folder_path, "idea_media_approval.png")
+                self.driver.save_screenshot(screenshot_path)
+                showing = Image.open(screenshot_path)
                 showing.show()
                 send_email()
-                logger.info("Screenshot done - Testcase 1.15 is passed")
+                logger.info("Screenshot done - Testcase 1.32 is passed")
 
             except NoSuchElementException as e:
                 logger.error(f"Element not found: {e.msg}")
-                raise

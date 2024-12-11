@@ -36,13 +36,14 @@ class Test_logout:
                 logging.info("Successfully clicked on the logout button")
                 time.sleep(5)
 
-                # Screenshot
                 logger.info("Taking screenshot")
-                self.driver.save_screenshot("logout.png")
-                showing = Image.open("logout.png")
+                folder_path = r"C:\Users\muduu\Downloads\stagingserver\Tests\screenshots"
+                screenshot_path = os.path.join(folder_path, "profile_logout.png")
+                self.driver.save_screenshot(screenshot_path)
+                showing = Image.open(screenshot_path)
                 showing.show()
                 send_email()
-                logger.info("Screenshot done - Testcase 1.4 is passed")
+                logger.info("Screenshot done - Testcase 1.2 is passed")
 
             except NoSuchElementException as e:
                 logging.info("No such element")

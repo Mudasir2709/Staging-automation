@@ -331,11 +331,17 @@ class Test_automate_of_kwords_idea:
 
                 logging.error("Element not found:{e}")
 
-        """Mail config"""
+        """Taking screenshot"""
         with caplog.at_level(logging.INFO):
             try:
-                logging.info("Sending mail")
+                logger.info("Taking screenshot")
+                folder_path = r"C:\Users\muduu\Downloads\stagingserver\Tests\screenshots"
+                screenshot_path = os.path.join(folder_path, "automation_of_keywords.png")
+                self.driver.save_screenshot(screenshot_path)
+                showing = Image.open(screenshot_path)
+                showing.show()
                 send_email()
-                logging.info("Successfully email sent - Testcase 1.19 is passed")
-            except ElementNotInteractableException as e :
-                logging.error("Element not found:{e}")
+                logger.info("Screenshot done - Testcase 1.18 is passed")
+
+            except NoSuchElementException as e:
+                logger.error(f"Element not found: {e.msg}")
