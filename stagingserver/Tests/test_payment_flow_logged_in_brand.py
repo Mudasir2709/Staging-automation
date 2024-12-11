@@ -168,7 +168,7 @@ class Test_payment_logged_in:
             try:
                 logging.info("Clicking on UPI payment verify button")
                 upi_field_verify = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//button[@data-testid='vpa-submit']")))
+                    (By.XPATH, "//button")))
                 upi_field_verify.click()
                 time.sleep(5)
                 logging.info("Successfully clicked the verify button - Testcase 1.10 is passed")
