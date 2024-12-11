@@ -11,6 +11,7 @@ from PIL import Image
 from send_mail import send_email
 from selenium.webdriver.common.keys import Keys
 from pynput.keyboard import Key, Controller
+from selenium.common.exceptions import NoSuchFrameException
 
 logger = logging.getLogger(__name__)
 
