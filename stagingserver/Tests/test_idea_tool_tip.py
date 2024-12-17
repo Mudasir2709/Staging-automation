@@ -16,9 +16,9 @@ logger = logging.getLogger(__name__)
 
 
 @pytest.mark.usefixtures("setup", "user_account", "otp_config")
-class Test_media_approval:
+class Test_create_idea:
 
-    def test_media_approval(self, caplog):
+    def test_create_idea(self, caplog):
 
         """"Clicking on the hamburger menu"""
         with caplog.at_level(logging.INFO):
@@ -88,7 +88,7 @@ class Test_media_approval:
                 logging.info("Entering values in the OS dialog box")
                 keyboard = Controller()
                 time.sleep(1)
-                keyboard.type(r"C:\Users\muduu\Downloads\fire_alarm.jpg")
+                keyboard.type(r"C:\Users\muduu\OneDrive\Desktop\Images\walllight.jpg")
                 keyboard.press(Key.enter)
                 keyboard.release(Key.enter)
                 time.sleep(3)
@@ -103,15 +103,14 @@ class Test_media_approval:
             try:
                 logging.info("Clicking on the done button ")
                 done_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//button[text()='Done']")))
+                    (By.XPATH, "//span[text()='Done']")))
                 done_button.click()
-                time.sleep(5)
+                time.sleep(2)
                 logging.info("Successfully Clicked on the done button - Testcase 1.6 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
 
                 logging.error("Element not found:{e}")
-
         """Scroll in to view"""
         with caplog.at_level(logging.INFO):
             try:
@@ -128,7 +127,7 @@ class Test_media_approval:
                 logging.info("Entering value in the field ")
                 idea_name = WebDriverWait(self.driver, 10).until(BD.presence_of_element_located(
                     (By.XPATH, "(//input[@id='IdeaTitle*'])[2]")))
-                idea_name.send_keys("Commercial alarm")
+                idea_name.send_keys("Idea tool tip")
                 time.sleep(3)
 
                 logging.info("Successfully entered value in the field - Testcase 1.7 is passed")
@@ -161,7 +160,7 @@ class Test_media_approval:
             try:
                 logging.info("Scrolling down ")
                 self.driver.execute_script("window.scrollBy(0, 500);")
-                time.sleep(5)
+                time.sleep(2)
                 logging.info("Successfully done - Testcase 1.7 is passed")
             except(NoSuchElementException, ElementNotInteractableException) as e:
                 logging.error("Element not found : {e}")
@@ -173,7 +172,7 @@ class Test_media_approval:
                 idea_classification_1 = WebDriverWait(self.driver, 10).until(BD.presence_of_element_located(
                     (By.XPATH, "(//span[@class='absolute w-full h-full z-10 cursor-pointer'])[2]")))
                 self.driver.execute_script("arguments[0].click();",idea_classification_1)
-                time.sleep(3)
+                time.sleep(2)
                 logging.info("Successfully clicked on the field - Testcase 1.11 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
@@ -187,7 +186,7 @@ class Test_media_approval:
                 l1 = WebDriverWait(self.driver, 10).until(BD.presence_of_element_located(
                     (By.XPATH, "//p[text()='Commercial']")))
                 l1.click()
-                time.sleep(3)
+                time.sleep(2)
 
                 logging.info("Successfully selected the L1 value- Testcase 1.7 is passed")
 
@@ -202,7 +201,7 @@ class Test_media_approval:
                 l2 = WebDriverWait(self.driver, 10).until(BD.presence_of_element_located(
                     (By.XPATH, "//p[text()='Commercial Building']")))
                 l2.click()
-                time.sleep(3)
+                time.sleep(2)
 
                 logging.info("Successfully selected the L2 value- Testcase 1.7 is passed")
 
@@ -231,14 +230,13 @@ class Test_media_approval:
 
                 logging.info("Clicking on the submit button ")
                 submit_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "(//button[text()='Submit'])[2]")))
+                    (By.XPATH, "(//span[text()='Submit'])[2]")))
                 submit_button.click()
-                time.sleep(5)
+                time.sleep(3)
                 logging.info("Successfully clicked - Testcase 1.14 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
                 logging.error("Element not found:{e}")
-                time.sleep(5)
 
         """"Clicking on the got it  button"""
         with caplog.at_level(logging.INFO):
@@ -248,288 +246,271 @@ class Test_media_approval:
                 got_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
                     (By.XPATH, "//button[normalize-space()='Got it!']")))
                 got_button.click()
-                time.sleep(5)
+                time.sleep(2)
                 logging.info("Successfully clicked - Testcase 1.14 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
                 logging.error("Element not found:{e}")
-                time.sleep(5)
 
-        """Navigating to the admin side"""
-
+        """"Clicking on the title card"""
         with caplog.at_level(logging.INFO):
             try:
-                logging.info("Opening a new tab and navigating to the admin panel")
-                self.driver.execute_script("window.open('about:blank', '_blank');")
-                self.driver.switch_to.window(self.driver.window_handles[1])
-                time.sleep(5)
-                self.driver.get("https://fedstage.buildingworld.com/admin/login")
-                time.sleep(5)
 
-                admin_username = WebDriverWait(self.driver, 10).until(BD.presence_of_element_located(
-                    (By.XPATH, "//input[@name='email']")))
-                admin_username.send_keys("mudasiradmin@yopmail.com")
-
-                admin_password = WebDriverWait(self.driver, 10).until(BD.presence_of_element_located(
-                    (By.XPATH, "//input[@id='password']")))
-                admin_password.send_keys("Mud@123")
-
-                admin_login = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//button[text()='Login']")))
-                admin_login.click()
-
-                time.sleep(5)
-                logging.info("Successfully logged in to the admin panel - Testcase 1.15 is passed")
-
-            except (NoSuchElementException, ElementNotInteractableException):
-                logging.error("Element not found:{e}")
-
-        """"Clicking on the ideas link"""
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Clicking on the ideas link ")
-                ideas_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//p[normalize-space()='Ideas']")))
-                ideas_button.click()
-                time.sleep(5)
-                logging.info("Successfully clicked - Testcase 1.16 is passed")
+                logging.info("Clicking on the submit button ")
+                title_card = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//span[@title='Idea tool tip']")))
+                title_card.click()
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.15 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
                 logging.error("Element not found:{e}")
-                time.sleep(5)
-
-        """"Clicking on the idea to approve"""
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Clicking on the projects to approve ")
-                specific_idea = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//p[@title='Commercial alarm']")))
-                specific_idea.click()
-                time.sleep(5)
-                logging.info("Successfully clicked - Testcase 1.17 is passed")
-
-            except (NoSuchElementException, ElementNotInteractableException) as e:
-                logging.error("Element not found:{e}")
-                time.sleep(5)
-
-        """"Clicking on the approve button"""
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Clicking on the approve button ")
-                approve_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//button[normalize-space()='Approve']")))
-                self.driver.execute_script("arguments[0].click();", approve_button)
-                time.sleep(5)
-                logging.info("Successfully clicked - Testcase 1.18 is passed")
-
-            except (NoSuchElementException, ElementNotInteractableException) as e:
-                logging.error("Element not found:{e}")
-                time.sleep(5)
-
-        """"Entering values in the ID field """
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Entering values in the ID field")
-                id_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//input[@name='id']")))
-                id_button.send_keys("Ideas-001")
-                time.sleep(5)
-                logging.info("Successfully clicked - Testcase 1.18 is passed")
-
-            except (NoSuchElementException, ElementNotInteractableException) as e:
-                logging.error("Element not found:{e}")
-                time.sleep(5)
-
-        """"Clicking on the approve button"""
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Clicking on the approve button ")
-                approve_button_2 = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "(//button[text()='Approve'])[2]")))
-                self.driver.execute_script("arguments[0].click();", approve_button_2)
-                time.sleep(5)
-                logging.info("Successfully clicked - Testcase 1.18 is passed")
-
-            except (NoSuchElementException, ElementNotInteractableException) as e:
-                logging.error("Element not found:{e}")
-                time.sleep(5)
-
-        """Get back to the user side"""
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Getting back to the previous tab")
-
-                if len(self.driver.window_handles) > 1:
-                    self.driver.switch_to.window(self.driver.window_handles[0])
-                    logging.info("Switched back to the original tab. - Testcase 1.19 is passed")
-                    time.sleep(10)
-                    self.driver.refresh()
-
-            except (NoSuchElementException, ElementNotInteractableException) as e:
-                logging.error("Element not found: {e}")
-
-        """"Clicking on the approve tab"""
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Clicking on the approve button ")
-                approve_tab = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//button[text()='Approved']")))
-                self.driver.execute_script("arguments[0].click();", approve_tab)
-                time.sleep(5)
-                logging.info("Successfully clicked - Testcase 1.20 is passed")
-
-            except (NoSuchElementException, ElementNotInteractableException) as e:
-                logging.error("Element not found:{e}")
-                time.sleep(5)
-
-        """"Clicking on the details page"""
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Clicking on the details button")
-                details_page = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//span[@title='Commercial alarm']")))
-                self.driver.execute_script("arguments[0].click();", details_page)
-                time.sleep(5)
-                logging.info("Successfully clicked - Testcase 1.21 is passed")
-
-            except (NoSuchElementException, ElementNotInteractableException) as e:
-                logging.error("Element not found:{e}")
-                time.sleep(5)
 
         """"Clicking on the edit button"""
         with caplog.at_level(logging.INFO):
             try:
-                self.driver.refresh()
-                logging.info("Clicking on the edit tab")
-                edit_tab = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//body/div/div/div/div/div/div/div[2]/button[1]")))
-                self.driver.execute_script("arguments[0].click();", edit_tab)
-                time.sleep(5)
+
+                logging.info("Clicking on the submit button ")
+                edit_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//div[text()='Edit']")))
+                edit_button.click()
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.17 is passed")
+
+            except (NoSuchElementException, ElementNotInteractableException) as e:
+                logging.error("Element not found:{e}")
+
+        """"Clicking on the add brand button"""
+        with caplog.at_level(logging.INFO):
+            try:
+
+                logging.info("Clicking on the add product button")
+                add_brand = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "(//p[text()='Add Brand'])[2]")))
+                add_brand.click()
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.18 is passed")
+
+            except (NoSuchElementException, ElementNotInteractableException) as e:
+                logging.error("Element not found:{e}")
+
+        """"Searching the brand"""
+        with caplog.at_level(logging.INFO):
+            try:
+
+                logging.info("Searching the brand in the field")
+                add_brand = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//input[@placeholder='Search brand']")))
+                add_brand.send_keys("mudasir")
+
+                add_entered_data = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//p[text()='Mudasir & Co private limited']")))
+                add_entered_data.click()
+
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.19 is passed")
+
+            except (NoSuchElementException, ElementNotInteractableException) as e:
+                logging.error("Element not found:{e}")
+                time.sleep(2)
+
+        """"Clicking on the save button"""
+        with caplog.at_level(logging.INFO):
+            try:
+
+                logging.info("Clicking on the save button")
+                save_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//span[text()='Save']")))
+                save_button.click()
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.20 is passed")
+
+            except (NoSuchElementException, ElementNotInteractableException) as e:
+                logging.error("Element not found:{e}")
+                time.sleep(2)
+
+        """"Choosing the second value for brand"""
+        with caplog.at_level(logging.INFO):
+            try:
+
+                logging.info("Clicking on the add product button")
+                add_brand = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "(//p[text()='Add Brand'])[2]")))
+                add_brand.click()
+
+                search_brand = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//input[@placeholder='Search brand']")))
+                search_brand.send_keys("hindware")
+
+                add_entered_data = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//p[text()='Hindware Limited']")))
+                add_entered_data.click()
+
+                logging.info("Successfully clicked - Testcase 1.21 is passed")
+
+            except (NoSuchElementException, ElementNotInteractableException) as e:
+                logging.error("Element not found:{e}")
+
+        """"Clicking on the save button"""
+        with caplog.at_level(logging.INFO):
+            try:
+
+                logging.info("Clicking on the save button")
+                save_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//span[text()='Save']")))
+                save_button.click()
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.22 is passed")
+
+            except (NoSuchElementException, ElementNotInteractableException) as e:
+                logging.error("Element not found:{e}")
+
+        """"Choosing the third value for brand"""
+        with caplog.at_level(logging.INFO):
+            try:
+                logging.info("Clicking on the add product button")
+                add_brand = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "(//p[text()='Add Brand'])[2]")))
+                add_brand.click()
+
+                search_brand = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//input[@placeholder='Search brand']")))
+                search_brand.send_keys("jaquar")
+
+                add_entered_data = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//p[text()='Jaquar_Light']")))
+                add_entered_data.click()
+
                 logging.info("Successfully clicked - Testcase 1.23 is passed")
-
             except (NoSuchElementException, ElementNotInteractableException) as e:
                 logging.error("Element not found:{e}")
-                time.sleep(5)
 
-        """"Clicking on the browse button"""
+        """"Clicking on the save button"""
         with caplog.at_level(logging.INFO):
             try:
-                logging.info("Clicking on the browse button")
-                browse_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "(//span[text()='Browse'])[2]")))
-                browse_button.click()
-                time.sleep(5)
-                logging.info("Successfully clicked on the browse button- Testcase 1.24 is passed")
+
+                logging.info("Clicking on the save button")
+                save_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//span[text()='Save']")))
+                save_button.click()
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.24 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
                 logging.error("Element not found:{e}")
 
-        """selecting a document from a file"""
+        """"Clicking on the add service button"""
         with caplog.at_level(logging.INFO):
             try:
-                logging.info("Entering values in the OS dialog box")
-                keyboard = Controller()
-                time.sleep(1)
-                keyboard.type(r"C:\Users\muduu\Downloads\fire.mp4")
-                keyboard.press(Key.enter)
-                keyboard.release(Key.enter)
-                time.sleep(15)
-                logging.info("Successfully entered value - Testcase 1.25 is passed")
+
+                logging.info("Clicking on the add service button")
+                add_service = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "(//p[text()='Add Service'])[4]")))
+                add_service.click()
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.25 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
+                logging.error("Element not found:{e}")
+                time.sleep(2)
 
+        """"Searching the service"""
+        with caplog.at_level(logging.INFO):
+            try:
+
+                logging.info("Searching the brand in the field")
+                add_service = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//input[@placeholder='Search services']")))
+                add_service.send_keys("mudasir")
+
+                add_entered_data = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//p[text()='Mudasir']")))
+                add_entered_data.click()
+
+                check_box = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//input[@id='6']")))
+                check_box.click()
+
+                submit_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "(//span[text()='Submit'])[3]")))
+                submit_button.click()
+
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.26 is passed")
+
+            except (NoSuchElementException, ElementNotInteractableException) as e:
                 logging.error("Element not found:{e}")
 
-        """Scroll down till the page visible"""
-        element = WebDriverWait(self.driver, 10).until(
-            BD.element_to_be_clickable((By.XPATH, "(//label[text()='Idea Description*'])[2]")))
-        self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
-        time.sleep(3)
+        """"Clicking on the save button"""
+        with caplog.at_level(logging.INFO):
+            try:
+
+                logging.info("Clicking on the save button")
+                save_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//span[text()='Save']")))
+                save_button.click()
+                time.sleep(2)
+                logging.info("Successfully clicked - Testcase 1.27 is passed")
+
+                self.driver.execute_script("window.scrollBy(0, 600);")
+
+            except (NoSuchElementException, ElementNotInteractableException) as e:
+                logging.error("Element not found:{e}")
 
         """"Clicking on the submit button"""
         with caplog.at_level(logging.INFO):
             try:
-                logging.info("Clicking on the submit button")
-                submit_button = WebDriverWait(self.driver, 15).until(BD.element_to_be_clickable(
-                    (By.XPATH, "(//button[text()='Submit'])[2]")))
-                self.driver.execute_script("arguments[0].click();", submit_button)
-                time.sleep(5)
-                logging.info("Successfully clicked - Testcase 1.27 is passed")
-
-            except (NoSuchElementException, ElementNotInteractableException) as e:
-                logging.error("Element not found:{e}")
-                time.sleep(5)
-
-        """Again navigating to the admin panel to approve the uploaded media"""
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Navigating to the admin panel for approve the media")
-                self.driver.switch_to.window(self.driver.window_handles[1])
+                logging.info("Clicking on the save button")
+                submit_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "(//span[text()='Submit'])[2]")))
+                submit_button.click()
                 self.driver.refresh()
-                time.sleep(10)
-                logging.info("Successfully navigated to the admin panel - Testcase 1.28 is passed ")
+                time.sleep(3)
+                logging.info("Successfully clicked - Testcase 1.28 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
-                logging.error("Element not found : {e}")
-
-        """"Clicking on the project for details page"""
-        with caplog.at_level(logging.INFO):
-            try:
-                logging.info("Clicking on the specific project")
-                specific_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//p[text()='Commercial alarm']")))
-                specific_button.click()
-                time.sleep(5)
-
-                logging.info("Successfully navigated to the details page - Testcase 1.29 is passed")
-
-            except (NoSuchElementException, ElementNotInteractableException) as e:
-
                 logging.error("Element not found:{e}")
 
-                self.driver.execute_script("window.scrollBy(0, 300);")
-
-        """"Clicking on the approved icon"""
+        """"Clicking on the tagged brand """
         with caplog.at_level(logging.INFO):
             try:
-                logging.info("Clicking on the approved icon")
-                approved_button = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.CSS_SELECTOR, "img[class='h-5 w-5 p-0.5']")))
-                approved_button.click()
-                time.sleep(5)
-
-                logging.info("Successfully clicked on the approved button - Testcase 1.30 is passed")
+                logging.info("Clicking on the save button")
+                tagged_brand = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
+                    (By.XPATH, "//p[text()='Mudasir & Co private limited']")))
+                tagged_brand.click()
+                logging.info("Successfully clicked on the tagged brand - Testcase 1.29 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
-
                 logging.error("Element not found:{e}")
 
-        """"Clicking on the approved popup"""
+        """"Navigating to the new-tab """
         with caplog.at_level(logging.INFO):
             try:
-                logging.info("Clicking on the approve popup")
-                approved_popup = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//button[text()='Approve']")))
-                approved_popup.click()
-                time.sleep(5)
+                logging.info("Navigating & switch bag to the same tab")
 
-                logging.info("Successfully clicked on the approved popup - Testcase 1.31 is passed")
+                self.driver.execute_script("window.open('about:blank', '_blank');")
+                self.driver.switch_to.window(self.driver.window_handles[1])
+
+                if len(self.driver.window_handles) > 1:
+                    self.driver.switch_to.window(self.driver.window_handles[0])
+                    time.sleep(2)
+
+                logging.info("Successfully navigated back to the same tab - Testcase 1.29 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
-
                 logging.error("Element not found:{e}")
 
         """Taking screenshot"""
         with caplog.at_level(logging.INFO):
             try:
                 logger.info("Taking screenshot")
-                folder_path = r"C:\Users\muduu\Downloads\stagingserver\Tests\screenshots"
-                screenshot_path = os.path.join(folder_path, "idea_media_approval.png")
+                folder_path = r"C:\Users\muduu\OneDrive\Desktop\Git chnages\Staging-automation\stagingserver\Tests\screenshots"
+                screenshot_path = os.path.join(folder_path, "tool_tip.png")
                 self.driver.save_screenshot(screenshot_path)
                 showing = Image.open(screenshot_path)
                 showing.show()
                 send_email()
-                logger.info("Screenshot done - Testcase 1.32 is passed")
+                logger.info("Screenshot done - Testcase 1.30 is passed")
 
             except NoSuchElementException as e:
                 logger.error(f"Element not found: {e.msg}")

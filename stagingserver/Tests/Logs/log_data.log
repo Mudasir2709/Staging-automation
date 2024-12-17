@@ -1,22 +1,72 @@
-2024-12-17 10:21:51 INFO Entering email.
-2024-12-17 10:21:51 INFO Entering password.
-2024-12-17 10:21:51 INFO Clicking the submit button.
-2024-12-17 10:22:04 INFO Entering OTP into the boxes
-2024-12-17 10:22:07 INFO Entered OTP successfully - Testcase 1.5 is passed
-2024-12-17 10:22:12 INFO clicking on the advertise with us button
-2024-12-17 10:22:15 INFO Successfully Clicked - Testcase 1.1 is passed
-2024-12-17 10:22:20 INFO Choosing the plan
-2024-12-17 10:22:25 INFO Successfully choosed a plan - Testcase 1.2 is passed
-2024-12-17 10:22:25 INFO Clicking on the submit button
-2024-12-17 10:22:31 INFO Successfully clicked the next button - Testcase 1.6 is passed
-2024-12-17 10:22:31 INFO switching to the frame
-2024-12-17 10:22:31 INFO Successfully switched to the frame - Testcase 1.7 is passed
-2024-12-17 10:22:31 INFO Clicking on UPI payment option
-2024-12-17 10:22:37 INFO Successfully clicked the next button - Testcase 1.8 is passed
-2024-12-17 10:22:37 INFO Clicking on UPI payment option
-2024-12-17 10:22:42 INFO Successfully clicked the next button - Testcase 1.9 is passed
-2024-12-17 10:22:42 INFO Clicking on UPI payment verify button
-2024-12-17 10:22:47 INFO Successfully clicked the verify button - Testcase 1.10 is passed
-2024-12-17 10:22:57 INFO Taking screenshot
-2024-12-17 10:22:58 INFO Screenshot done - Testcase 1.11 is passed
-2024-12-17 10:22:58 INFO Tearing down the WebDriver.
+2024-12-17 18:01:08 INFO Entering email.
+2024-12-17 18:01:08 INFO Entering password.
+2024-12-17 18:01:08 INFO Clicking the submit button.
+2024-12-17 18:01:21 INFO Entering OTP into the boxes
+2024-12-17 18:01:24 INFO Entered OTP successfully - Testcase 1.5 is passed
+2024-12-17 18:01:29 INFO Clicking on the hamburger menu
+2024-12-17 18:01:32 INFO Successfully Clicked on the hamburger menu- Testcase 1.2 is passed
+2024-12-17 18:01:32 INFO Clicking on the my project
+2024-12-17 18:01:35 INFO Successfully Clicked on the My project button- Testcase 1.3 is passed
+2024-12-17 18:01:35 INFO Clicking on the create project
+2024-12-17 18:01:38 INFO Successfully Clicked on the create project button- Testcase 1.4 is passed
+2024-12-17 18:01:38 INFO Clicking on the upload image
+2024-12-17 18:01:38 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:01:42 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:01:42 INFO Clicking on the done button 
+2024-12-17 18:01:49 INFO Successfully Clicked 1 on the done button - Testcase 1.7 is passed
+2024-12-17 18:01:49 INFO Clicking on the upload image
+2024-12-17 18:01:52 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:01:56 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:01:56 INFO Clicking on the done button 
+2024-12-17 18:02:02 INFO Successfully Clicked 2 on the done button - Testcase 1.7 is passed
+2024-12-17 18:02:02 INFO Clicking on the upload image
+2024-12-17 18:02:05 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:02:09 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:02:09 INFO Clicking on the done button 
+2024-12-17 18:02:16 INFO Successfully Clicked 3 on the done button - Testcase 1.7 is passed
+2024-12-17 18:02:16 INFO Clicking on the upload image
+2024-12-17 18:02:19 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:02:23 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:02:23 INFO Clicking on the done button 
+2024-12-17 18:02:30 INFO Successfully Clicked 4 on the done button - Testcase 1.7 is passed
+2024-12-17 18:02:30 INFO Clicking on the upload image
+2024-12-17 18:02:33 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:02:37 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:02:37 INFO Clicking on the done button 
+2024-12-17 18:02:43 INFO Successfully Clicked  5 on the done button - Testcase 1.7 is passed
+2024-12-17 18:02:43 INFO Clicking on the upload image
+2024-12-17 18:02:46 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:02:50 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:02:50 INFO Clicking on the done button 
+2024-12-17 18:02:57 INFO Successfully Clicked 6 on the done button - Testcase 1.7 is passed
+2024-12-17 18:02:57 INFO Clicking on the upload image
+2024-12-17 18:03:00 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:03:04 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:03:04 INFO Clicking on the done button 
+2024-12-17 18:03:11 INFO Successfully Clicked 7 on the done button - Testcase 1.7 is passed
+2024-12-17 18:03:11 INFO Clicking on the upload image
+2024-12-17 18:03:11 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:03:15 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:03:15 INFO Clicking on the done button 
+2024-12-17 18:03:22 INFO Successfully Clicked 8  on the done button - Testcase 1.7 is passed
+2024-12-17 18:03:22 INFO Clicking on the upload image
+2024-12-17 18:03:22 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:03:26 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:03:26 INFO Clicking on the done button 
+2024-12-17 18:03:32 INFO Successfully Clicked 9 on the done button - Testcase 1.7 is passed
+2024-12-17 18:03:32 INFO Clicking on the upload image
+2024-12-17 18:03:32 INFO Successfully Clicked on the upload button - Testcase 1.5 is passed
+2024-12-17 18:03:36 INFO Successfully entered value - Testcase 1.6 is passed
+2024-12-17 18:03:36 INFO Clicking on the done button 
+2024-12-17 18:03:43 INFO Successfully Clicked on 10 the done button - Testcase 1.7 is passed
+2024-12-17 18:03:43 INFO Entering value in the field 
+2024-12-17 18:03:45 INFO Successfully entered value in the field - Testcase 1.8 is passed
+2024-12-17 18:03:48 INFO Selecting value in the type of building field 
+2024-12-17 18:03:52 INFO Successfully entered value in the field - Testcase 1.9 is passed
+2024-12-17 18:03:52 INFO Entering value in the field 
+2024-12-17 18:03:54 INFO Successfully entered value in the field - Testcase 1.10 is passed
+2024-12-17 18:03:54 INFO Selecting value from the dropdown
+2024-12-17 18:03:57 INFO Successfully selected value from the dropdown - Testcase 1.11 is passed
+2024-12-17 18:03:57 INFO Clicking on the submit button 
+2024-12-17 18:04:00 INFO Successfully clicked - Testcase 1.12 is passed
+2024-12-17 18:04:00 INFO Tearing down the WebDriver.

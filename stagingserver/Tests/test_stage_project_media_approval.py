@@ -1,6 +1,5 @@
 import time
 import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, ElementNotInteractableException
 from selenium.webdriver.support.wait import WebDriverWait
@@ -9,9 +8,8 @@ import logging
 import os
 from PIL import Image
 from send_mail import send_email
-from selenium.webdriver.common.keys import Keys
 from pynput.keyboard import Key, Controller
-
+from helper_methods import enter_text_in_os_dialog
 logger = logging.getLogger(__name__)
 
 
@@ -85,13 +83,11 @@ class Test_media_approval:
         """selecting a document from a file"""
         with caplog.at_level(logging.INFO):
             try:
-                logging.info("Entering values in the OS dialog box")
-                keyboard = Controller()
-                time.sleep(1)
-                keyboard.type(r"C:\Users\muduu\Downloads\project.jpg")
-                keyboard.press(Key.enter)
-                keyboard.release(Key.enter)
-                time.sleep(3)
+
+                file_path = "C:\Users\muduu\Downloads\project.jpg"
+
+                enter_text_in_os_dialog(file_path)
+
                 logging.info("Successfully entered value - Testcase 1.6 is passed")
 
             except (NoSuchElementException, ElementNotInteractableException) as e:
