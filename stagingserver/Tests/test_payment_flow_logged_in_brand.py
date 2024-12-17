@@ -124,12 +124,12 @@ class Test_payment_logged_in:
 
             try:
                 logging.info("switching to the frame")
-                switch_frame = self.driver.find_element(By.XPATH,"//div[@id='razorpay-checkout-v2-container']")
+                switch_frame = WebDriverWait(self.driver,10).until(BD.presence_of_element_located((By.XPATH,"//iframe[@class='razorpay-checkout-frame']")))
                 self.driver.switch_to.frame(switch_frame)
 
                 logging.info("Successfully switched to the frame - Testcase 1.7 is passed")
 
-            except (NoSuchElementException, ElementNotInteractableException) as e:
+            except (ElementNotInteractableException) as e:
 
                 logging.error("Element not found:{e}")
 
@@ -169,7 +169,7 @@ class Test_payment_logged_in:
             try:
                 logging.info("Clicking on UPI payment verify button")
                 upi_field_verify = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(
-                    (By.XPATH, "//button")))
+                    (By.XPATH, "//button[@data-testid='vpa-submit']")))
                 upi_field_verify.click()
                 time.sleep(5)
                 logging.info("Successfully clicked the verify button - Testcase 1.10 is passed")
@@ -178,6 +178,21 @@ class Test_payment_logged_in:
             except (NoSuchElementException, ElementNotInteractableException) as e:
 
                 logging.error("Element not found:{e}")
+
+        """Taking screenshot"""
+        with caplog.at_level(logging.INFO):
+            try:
+                logger.info("Taking screenshot")
+                folder_path = r"/Users/mac/Desktop/new repo/Staging-automation/stagingserver/Tests/screenshots"
+                screenshot_path = os.path.join(folder_path, "payment.png")
+                self.driver.save_screenshot(screenshot_path)
+                showing = Image.open(screenshot_path)
+                showing.show()
+                send_email()
+                logger.info("Screenshot done - Testcase 1.11 is passed")
+
+            except NoSuchElementException as e:
+                logger.error(f"Element not found: {e.msg}")
 
 
 

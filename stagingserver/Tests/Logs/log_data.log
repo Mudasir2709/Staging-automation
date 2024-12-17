@@ -1,11 +1,22 @@
-2024-12-11 16:40:47 INFO Entering OTP into the boxes
-2024-12-11 16:40:52 INFO Entered OTP successfully - Testcase 1.5 is passed
-2024-12-11 16:40:57 INFO clicking on the advertise with us button
-2024-12-11 16:41:00 INFO Successfully Clicked - Testcase 1.1 is passed
-2024-12-11 16:41:05 INFO Choosing the plan
-2024-12-11 16:41:10 INFO Successfully choosed a plan - Testcase 1.2 is passed
-2024-12-11 16:41:10 INFO Clicking on the submit button
-2024-12-11 16:41:16 INFO Successfully clicked the next button - Testcase 1.6 is passed
-2024-12-11 16:41:16 INFO switching to the frame
-2024-12-11 16:41:16 ERROR Element not found:{e}
-2024-12-11 16:41:16 INFO Clicking on UPI payment option
+2024-12-17 10:21:51 INFO Entering email.
+2024-12-17 10:21:51 INFO Entering password.
+2024-12-17 10:21:51 INFO Clicking the submit button.
+2024-12-17 10:22:04 INFO Entering OTP into the boxes
+2024-12-17 10:22:07 INFO Entered OTP successfully - Testcase 1.5 is passed
+2024-12-17 10:22:12 INFO clicking on the advertise with us button
+2024-12-17 10:22:15 INFO Successfully Clicked - Testcase 1.1 is passed
+2024-12-17 10:22:20 INFO Choosing the plan
+2024-12-17 10:22:25 INFO Successfully choosed a plan - Testcase 1.2 is passed
+2024-12-17 10:22:25 INFO Clicking on the submit button
+2024-12-17 10:22:31 INFO Successfully clicked the next button - Testcase 1.6 is passed
+2024-12-17 10:22:31 INFO switching to the frame
+2024-12-17 10:22:31 INFO Successfully switched to the frame - Testcase 1.7 is passed
+2024-12-17 10:22:31 INFO Clicking on UPI payment option
+2024-12-17 10:22:37 INFO Successfully clicked the next button - Testcase 1.8 is passed
+2024-12-17 10:22:37 INFO Clicking on UPI payment option
+2024-12-17 10:22:42 INFO Successfully clicked the next button - Testcase 1.9 is passed
+2024-12-17 10:22:42 INFO Clicking on UPI payment verify button
+2024-12-17 10:22:47 INFO Successfully clicked the verify button - Testcase 1.10 is passed
+2024-12-17 10:22:57 INFO Taking screenshot
+2024-12-17 10:22:58 INFO Screenshot done - Testcase 1.11 is passed
+2024-12-17 10:22:58 INFO Tearing down the WebDriver.
