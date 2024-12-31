@@ -69,7 +69,6 @@ class Test_automate_of_kwords_idea:
 
                 logging.error("Element not found:{e}")
 
-
         """Switching in to the new tab"""
         with caplog.at_level(logging.INFO):
             try:

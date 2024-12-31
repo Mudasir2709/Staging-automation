@@ -11,6 +11,7 @@ from send_mail import send_email
 from pynput.keyboard import Key, Controller
 from helper_methods import enter_text_in_os_dialog
 
+
 logger = logging.getLogger(__name__)
 
 

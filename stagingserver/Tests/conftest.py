@@ -7,6 +7,9 @@ from selenium.webdriver.support import expected_conditions as BD
 import logging
 import time
 from selenium.common.exceptions import NoSuchElementException,ElementNotInteractableException
+from PIL import Image
+import os
+
 
 @pytest.fixture(scope='class')
 def setup(request):
@@ -184,6 +187,17 @@ def otp_config_for_dealer(request, setup, caplog):
                                                                             "//button[normalize-space()='Verify']")))
     verify_btn.click()
     time.sleep(5)
+
+
+# @pytest.fixture(scope="function")
+# def screen_shot(request, setup, caplog):
+#     request = setup
+#     folder_path = r"C:/Users/muduu/OneDrive/Desktop/Git chnages/Staging-automation/stagingserver/Tests/screenshots"
+#     screenshot_path = os.path.join(folder_path, "payment.png")
+#     showing = Image.open(screenshot_path)
+#     showing.show()
+
+
 
 
 
