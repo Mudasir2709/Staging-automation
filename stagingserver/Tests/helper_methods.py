@@ -13,6 +13,7 @@ from send_mail import send_email
 from pynput.keyboard import Key, Controller
 import pytest
 from Locators import class_Locators
+from selenium.webdriver.remote.webelement import WebElement
 
 
 def enter_text_in_os_dialog(file_path):
@@ -38,6 +39,14 @@ def java_click(driver, Locator):
 def send_keys(driver, Locator,text):
     element = WebDriverWait(driver,10).until(BD.presence_of_element_located(Locator))
     element.send_keys(text)
+
+
+def move_element(driver, locator ):
+    element = WebDriverWait(driver,10).until(BD.presence_of_element_located(locator))
+    action_chain = ActionChains(driver)
+    action_chain.move_to_element(element)
+    action_chain.perform()
+
 
 
 

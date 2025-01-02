@@ -15,6 +15,7 @@ from pynput.keyboard import Key, Controller
 
 logger = logging.getLogger(__name__)
 
+
 @pytest.mark.usefixtures("setup", "user_account", "otp_config")
 class Test_create_product:
 

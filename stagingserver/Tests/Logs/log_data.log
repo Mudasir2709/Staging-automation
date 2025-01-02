@@ -1,34 +1,18 @@
-2024-12-31 12:42:59 INFO Entering email.
-2024-12-31 12:42:59 INFO Entering password.
-2024-12-31 12:42:59 INFO Clicking the submit button.
-2024-12-31 12:43:12 INFO Entering OTP into the boxes
-2024-12-31 12:43:15 INFO Entered OTP successfully - Testcase 1.5 is passed
-2024-12-31 12:43:20 INFO Clicking on the hamburger menu
-2024-12-31 12:43:20 INFO Successfully clicked on the hamburger menu - Testcase 1.1 is passed
-2024-12-31 12:43:23 INFO Clicking on the my videos button
-2024-12-31 12:43:23 INFO Successfully clicked on the my video button - Testcase 1.2 is passed
-2024-12-31 12:43:26 INFO Clicking on the create video button
-2024-12-31 12:43:26 INFO Successfully clicked on the create video button - Testcase 1.3 is passed
-2024-12-31 12:43:29 INFO Clicking on the browse button
-2024-12-31 12:43:29 INFO Successfully clicked on the browse button - Testcase 1.4 is passed
-2024-12-31 12:43:32 INFO Uploading video from the dailog box
-2024-12-31 12:43:41 INFO Successfully uploaded a video - Testcase 1.5 is passed
-2024-12-31 12:43:41 INFO Sending value to the field
-2024-12-31 12:43:41 INFO Successfully sent a value to the field - Testcase 1.5 is passed
-2024-12-31 12:43:41 INFO Sending value to the description field
-2024-12-31 12:43:41 INFO Successfully sent a value to the description field - Testcase 1.6 is passed
-2024-12-31 12:43:41 INFO Sending value to the location field
-2024-12-31 12:43:41 INFO Successfully sent a value to the location field - Testcase 1.7 is passed
-2024-12-31 12:43:41 INFO Selecting value from the location suggestion
-2024-12-31 12:43:42 INFO Successfully entered value from the suggestion - Testcase 1.8 is passed
-2024-12-31 12:43:42 INFO Sending value to the tags field
-2024-12-31 12:43:42 INFO Successfully entered value in the tag field - Testcase 1.9 is passed
-2024-12-31 12:43:42 INFO Clicking on the submit button
-2024-12-31 12:43:42 INFO Successfully clicked the button - Testcase 1.10 is passed
-2024-12-31 12:43:42 INFO Navigating to the new tab for admin panel
-2024-12-31 12:43:47 INFO Successfully navigated to the admin panel - Testcase 1.11 is passed
-2024-12-31 12:43:47 INFO Entering credentials for the fields
-2024-12-31 12:43:51 INFO Successfully navigated to the admin panel - Testcase 1.12 is passed
-2024-12-31 12:43:51 INFO Approving the video
-2024-12-31 12:43:59 INFO Successfully approved a video - Testcase 1.14 is passed
-2024-12-31 12:43:59 INFO Tearing down the WebDriver.
+2025-01-02 17:53:32 INFO Entering email.
+2025-01-02 17:53:32 INFO Entering password.
+2025-01-02 17:53:32 INFO Clicking the submit button.
+2025-01-02 17:53:44 INFO Entering OTP into the boxes
+2025-01-02 17:53:48 INFO Entered OTP successfully - Testcase 1.5 is passed
+2025-01-02 17:53:53 INFO Navigating to the products page
+2025-01-02 17:53:53 INFO Successfully clicked on the products tab - Testcase 1.1 is passed
+2025-01-02 17:53:56 INFO Creating a folder
+2025-01-02 17:54:02 INFO Successfully created a folder - Testcase 1.2 is passed
+2025-01-02 17:54:02 INFO Navigating to the other element
+2025-01-02 17:54:07 INFO Successfully wishlisted the product - Testcase 1.3 is passed 
+2025-01-02 17:54:08 INFO Navigating to the idea section
+2025-01-02 17:54:21 INFO Successfully navigated to the idea section - Testcase 1.4 is passed 
+2025-01-02 17:54:21 INFO Navigating to the service section
+2025-01-02 17:54:32 INFO Successfully navigated to the service section- Testcase 1.5 is passed 
+2025-01-02 17:54:32 INFO Navigating to the mywishlist page
+2025-01-02 17:54:40 INFO Successfully navigated to the my wishlist page - Testcase 1.6 is passed 
+2025-01-02 17:54:40 INFO Tearing down the WebDriver.
