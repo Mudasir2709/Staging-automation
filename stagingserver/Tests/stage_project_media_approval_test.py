@@ -84,7 +84,7 @@ class Test_media_approval:
         with caplog.at_level(logging.INFO):
             try:
 
-                file_path = "C:\Users\muduu\Downloads\project.jpg"
+                file_path = r"C:\Users\muduu\Downloads\project.jpg"
 
                 enter_text_in_os_dialog(file_path)
 

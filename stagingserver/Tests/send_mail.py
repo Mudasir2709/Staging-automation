@@ -8,7 +8,7 @@ from email import encoders
 
 def send_email():
     # Email configuration
-    log_file_path = r"C:\Users\muduu\Downloads\stagingserver\Tests\Logs\log_data.log"
+    log_file_path = r"C:\Users\muduu\OneDrive\Desktop\Git chnages\Staging-automation\stagingserver\Tests\Logs\log_data.log"
     recipient_email = ["mudasir@appinessworld.com"]
     sender_email = "testingbuildingworld@gmail.com"  # Corrected typo in email
     sender_password = "fzan xsli hrvc pinh"  # App Password
