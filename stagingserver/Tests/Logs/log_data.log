@@ -1,28 +1,23 @@
-2025-01-03 13:01:22 INFO Entering email.
-2025-01-03 13:01:22 INFO Entering password.
-2025-01-03 13:01:22 INFO Clicking the submit button.
-2025-01-03 13:01:35 INFO Entering OTP into the boxes
-2025-01-03 13:01:38 INFO Entered OTP successfully - Testcase 1.5 is passed
-2025-01-03 13:01:43 INFO Clicking on the hamburger menu
-2025-01-03 13:01:43 INFO Successfully clicked on the hamburger menu - Testcase 1.1 is passed
-2025-01-03 13:01:43 INFO Clicking on the my videos button
-2025-01-03 13:01:43 INFO Successfully clicked on the my video button - Testcase 1.2 is passed
-2025-01-03 13:01:43 INFO Clicking on the create video button
-2025-01-03 13:01:44 INFO Successfully clicked on the create video button - Testcase 1.3 is passed
-2025-01-03 13:01:44 INFO Clicking on the browse button
-2025-01-03 13:01:44 INFO Successfully clicked on the browse button - Testcase 1.4 is passed
-2025-01-03 13:01:44 INFO Uploading video from the dailog box
-2025-01-03 13:01:54 INFO Sending value to the field
-2025-01-03 13:01:54 INFO Successfully sent a value to the field - Testcase 1.5 is passed
-2025-01-03 13:01:54 INFO Sending value to the description field
-2025-01-03 13:01:54 INFO Successfully sent a value to the description field - Testcase 1.6 is passed
-2025-01-03 13:01:54 INFO Sending value to the location field
-2025-01-03 13:01:54 INFO Successfully sent a value to the location field - Testcase 1.7 is passed
-2025-01-03 13:01:54 INFO Selecting value from the location suggestion
-2025-01-03 13:01:54 INFO Successfully entered value from the suggestion - Testcase 1.8 is passed
-2025-01-03 13:01:54 INFO Sending value to the tags field
-2025-01-03 13:01:55 INFO Successfully entered value in the tag field - Testcase 1.9 is passed
-2025-01-03 13:01:55 INFO Clicking on the submit button
-2025-01-03 13:01:55 INFO Successfully clicked the button - Testcase 1.10 is passed
-2025-01-03 13:02:00 INFO Taking screenshot
-2025-01-03 13:02:03 INFO Tearing down the WebDriver.
+2025-01-07 18:10:12 INFO Entering email.
+2025-01-07 18:10:12 INFO Entering password.
+2025-01-07 18:10:12 INFO Clicking the submit button.
+2025-01-07 18:10:15 INFO Clicking on the profile menu
+2025-01-07 18:10:17 INFO Successfully clicked on the profile menu - Testcase 1.1 is passed
+2025-01-07 18:10:17 INFO Clicking on the sign up button
+2025-01-07 18:10:19 INFO Successfully clicked on the signup menu - Testcase 1.2 is passed
+2025-01-07 18:10:19 INFO Entering value in the email field button
+2025-01-07 18:10:21 INFO Successfully entered value in the field- Testcase 1.3 is passed
+2025-01-07 18:10:21 INFO Clicking on the getotp button
+2025-01-07 18:10:23 INFO Successfully clicked the button- Testcase 1.4 is passed
+2025-01-07 18:10:23 INFO Entering OTP in to the fields
+2025-01-07 18:10:24 INFO Successfully entered otp- Testcase 1.5 is passed
+2025-01-07 18:10:24 INFO Clicking on the verify button
+2025-01-07 18:10:26 INFO Successfully clicked the button- Testcase 1.6 is passed
+2025-01-07 18:10:26 INFO Entering passwords in to the field
+2025-01-07 18:10:28 INFO Successfully clicked the button- Testcase 1.7 is passed
+2025-01-07 18:10:28 INFO Selecting an user role
+2025-01-07 18:10:30 INFO Successfully selected an user - Testcase 1.8 is passed
+2025-01-07 18:10:30 INFO Filling an form 
+2025-01-07 18:10:49 INFO Taking screenshot
+2025-01-07 18:10:53 INFO Successfully filled a form - Testcase 1.9 is passed
+2025-01-07 18:10:53 INFO Tearing down the WebDriver.

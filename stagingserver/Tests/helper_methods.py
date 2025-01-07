@@ -36,6 +36,12 @@ def java_click(driver, Locator):
     driver.execute_script("arguments[0].click();", element)
 
 
+def java_send_keys(driver, Locator, text):
+    element = WebDriverWait(driver,10).until(BD.element_to_be_clickable(Locator))
+    driver.execute_script("arguments[0].value = arguments[1];",element,text)
+
+
+
 def send_keys(driver, Locator,text):
     element = WebDriverWait(driver,10).until(BD.presence_of_element_located(Locator))
     element.send_keys(text)

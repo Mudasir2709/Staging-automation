@@ -9,6 +9,7 @@ import time
 from selenium.common.exceptions import NoSuchElementException,ElementNotInteractableException
 from PIL import Image
 import os
+from selenium.webdriver.chrome.options import Options
 
 
 @pytest.fixture(scope='class')
@@ -16,11 +17,10 @@ def setup(request):
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
 
-    # logger.info("Setting up the WebDriver.")
-    # service = Service(ChromeDriverManager().install())
-    # driver = webdriver.Chrome(service=service)
+    # chrome_options = Options()
+    # chrome_options.add_argument("--headless")
+    # chrome_options.add_argument("--disable-gpu")
     driver = webdriver.Chrome()
-
     driver.delete_all_cookies()
     driver.maximize_window()
     driver.get("https://fedstage.buildingworld.com/tempLogin")
