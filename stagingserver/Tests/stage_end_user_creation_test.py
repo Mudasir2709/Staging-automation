@@ -1,16 +1,9 @@
 import time
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as BD
 from selenium.common.exceptions import NoSuchElementException , ElementNotInteractableException
 import logging
 import os
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
 from PIL import Image
 from send_mail import send_email
-from pynput.keyboard import Key, Controller
 import pytest
 from helper_methods import click_action , java_click , send_keys, enter_text_in_os_dialog , java_send_keys
 from Locators import class_Locators

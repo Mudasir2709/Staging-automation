@@ -1,23 +1,47 @@
-2025-01-07 18:10:12 INFO Entering email.
-2025-01-07 18:10:12 INFO Entering password.
-2025-01-07 18:10:12 INFO Clicking the submit button.
-2025-01-07 18:10:15 INFO Clicking on the profile menu
-2025-01-07 18:10:17 INFO Successfully clicked on the profile menu - Testcase 1.1 is passed
-2025-01-07 18:10:17 INFO Clicking on the sign up button
-2025-01-07 18:10:19 INFO Successfully clicked on the signup menu - Testcase 1.2 is passed
-2025-01-07 18:10:19 INFO Entering value in the email field button
-2025-01-07 18:10:21 INFO Successfully entered value in the field- Testcase 1.3 is passed
-2025-01-07 18:10:21 INFO Clicking on the getotp button
-2025-01-07 18:10:23 INFO Successfully clicked the button- Testcase 1.4 is passed
-2025-01-07 18:10:23 INFO Entering OTP in to the fields
-2025-01-07 18:10:24 INFO Successfully entered otp- Testcase 1.5 is passed
-2025-01-07 18:10:24 INFO Clicking on the verify button
-2025-01-07 18:10:26 INFO Successfully clicked the button- Testcase 1.6 is passed
-2025-01-07 18:10:26 INFO Entering passwords in to the field
-2025-01-07 18:10:28 INFO Successfully clicked the button- Testcase 1.7 is passed
-2025-01-07 18:10:28 INFO Selecting an user role
-2025-01-07 18:10:30 INFO Successfully selected an user - Testcase 1.8 is passed
-2025-01-07 18:10:30 INFO Filling an form 
-2025-01-07 18:10:49 INFO Taking screenshot
-2025-01-07 18:10:53 INFO Successfully filled a form - Testcase 1.9 is passed
-2025-01-07 18:10:53 INFO Tearing down the WebDriver.
+2025-01-08 15:21:47 INFO Entering email.
+2025-01-08 15:21:47 INFO Entering password.
+2025-01-08 15:21:47 INFO Clicking the submit button.
+2025-01-08 15:21:50 INFO Clicking on the profile icon
+2025-01-08 15:21:50 INFO Successfully done - Test case 1.1 is passed 
+2025-01-08 15:21:50 INFO Clicking on the signup link
+2025-01-08 15:21:52 INFO Successfully done - Test case 1.2 is passed 
+2025-01-08 15:21:52 INFO Entering value in the email field button
+2025-01-08 15:21:54 INFO Successfully entered value in the field- Testcase 1.3 is passed
+2025-01-08 15:21:54 INFO Clicking on the getotp button
+2025-01-08 15:21:57 INFO Successfully clicked the button- Testcase 1.4 is passed
+2025-01-08 15:21:57 INFO Entering OTP in to the fields
+2025-01-08 15:21:57 INFO Successfully entered otp- Testcase 1.5 is passed
+2025-01-08 15:21:57 INFO Clicking on the verify button
+2025-01-08 15:21:59 INFO Successfully clicked the button- Testcase 1.6 is passed
+2025-01-08 15:21:59 INFO Entering passwords in to the field
+2025-01-08 15:22:01 INFO Successfully clicked the button- Testcase 1.7 is passed
+2025-01-08 15:22:01 INFO Selecting an user role
+2025-01-08 15:22:03 INFO Successfully selected an user - Testcase 1.8 is passed
+2025-01-08 15:22:03 INFO Filling an form 
+2025-01-08 15:22:04 INFO Successfully name entered in the filed - Testcase 1.9 is passed
+2025-01-08 15:22:04 INFO Entering phone number 
+2025-01-08 15:22:04 INFO Successfully entered phone number - Testcase 1.10 is passed 
+2025-01-08 15:22:04 INFO Clicking on verify button
+2025-01-08 15:22:10 INFO Successfully verified - Testcase 1.11 is passed 
+2025-01-08 15:22:10 INFO Entering address in to the field 
+2025-01-08 15:22:13 INFO Successfully entered  - Testcase 1.12 is passed 
+2025-01-08 15:22:13 INFO Selecting a city 
+2025-01-08 15:22:15 INFO Successfully selected - Testcase 1.13 is passed 
+2025-01-08 15:22:15 INFO Selecting a location served
+2025-01-08 15:22:16 INFO Successfully selected - Testcase 1.14 is passed 
+2025-01-08 15:22:16 INFO Selecting a document type
+2025-01-08 15:22:16 INFO Successfully selected - Testcase 1.15 is passed 
+2025-01-08 15:22:16 INFO Verifying the document
+2025-01-08 15:22:21 INFO Successfully Verified - Testcase 1.16 is passed 
+2025-01-08 15:22:21 INFO Clicking on the browse button
+2025-01-08 15:22:21 INFO Successfully clicked on the browse button - Testcase 1.17 is passed
+2025-01-08 15:22:21 INFO Uploading a file
+2025-01-08 15:22:27 INFO Successfully uploaded -Testcase 1.17 is passed
+2025-01-08 15:22:27 INFO Clicking on the done button
+2025-01-08 15:22:29 INFO Successfully done - Testcase 1.18 is passed
+2025-01-08 15:22:29 INFO Clicking on the checkbox
+2025-01-08 15:22:32 INFO Successfully done - Testcase 1.19 is passed
+2025-01-08 15:22:32 INFO Clicking on the submit button
+2025-01-08 15:22:32 INFO Successfully done - Testcase 1.20 is passed
+2025-01-08 15:22:34 INFO Taking screenshot
+2025-01-08 15:22:38 INFO Tearing down the WebDriver.
