@@ -104,6 +104,31 @@ class class_Locators:
     dealer_browse = (By.XPATH,"(//span[text()='Browse'])[2]")
     dealer_submit = (By.XPATH,"//*[@id='html']/body/main/div/div[6]/div/div[12]/button")
 
+    """Service account locators"""
+    user_selection3 = (By.XPATH,"//div[text()='Service']")
+    service_phone_number = (By.XPATH,"//input[@id='Phone Number**']")
+    service_phone_number_verify = (By.XPATH, "(//p[text()='Verify'])[1]")
+    service_phone_number_submit = (By.XPATH,"//span[text()='Submit']")
+    service_city = (By.XPATH,"//*[@id='html']/body/main/div/div[6]/div/div[11]/div[2]/div/div/div/input")
+    service_city_suggestion = (By.XPATH, "//div[text()='Salem, Tamil Nadu']")
+    service_document_type = (By.XPATH, "//p[text()='GST']")
+    service_id_number = (By.XPATH,"//input[@id='ID Number']")
+    service_id_verify =(By.XPATH, "(//p[text()='Verify'])[1]")
+    service_document_verify_submit = (By.XPATH,"(//span[text()='Submit'])")
+    service_document_browse = (By.XPATH,"(//span[text()='Browse'])[3]")
+    service_continue = (By.XPATH,"//span[text()='Continue']")
+    service_types_of_service = (By.CSS_SELECTOR,"body > main > div > div.container.px-4.lg\:px-9.lg\:max-w-5xl.mx-auto.shadow-400.lg\:mt-0.lg\:mb-20.lg\:rounded-xl.min-h-screen > div > div:nth-child(3) > div:nth-child(2) > div > div > div > div > img")
+    service_type_of_service_suggestion = (By.XPATH,"//span[text()='Civil Engineers']")
+    service_specialization = (By.XPATH, '//*[@id="html"]/body/main/div/div[6]/div/div[3]/div[3]/div/div/div/div')
+    service_specialization_suggestion = (By.XPATH,"//span[text()='Commercial']")
+    service_location_served = (By.XPATH,'//*[@id="html"]/body/main/div/div[6]/div/div[3]/div[5]/div/div/div/span/div/div/input')
+    service_location_served_suggestion = (By.XPATH,"//label[text()='Salem, Tamil Nadu']")
+    service_document_select = (By.XPATH, "//div[text()='--Select--']")
+
+
+
+
+
 
 
 
