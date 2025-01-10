@@ -6,6 +6,12 @@ class class_Locators:
     "Locator for hamburger menu"
     hamburger_menu = (By.XPATH,"//*[@id='html']/body/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/img")
 
+    "Login link"
+    login_link = (By.XPATH,'(//p[text()="Login"])[2]')
+    login_with_otp = (By.CSS_SELECTOR,".text-base.text-zinc-500.cursor-pointer.select-none")
+    login_email_or_phone_number = (By.XPATH,"//input[@name='Phone Number or Email']")
+    login_get_otp_button = (By.XPATH,"//button[normalize-space()='Get OTP']")
+
     """Locators for my video page """
     my_videos = (By.XPATH,"(//p[text()='My Videos'])[1]")
     create_video = (By.CSS_SELECTOR,"button[class='py-3 px-4 hidden rounded-full w-full lg:flex gap-2 items-center text-sm font-semibold opacity-100 bg-bw-blue-500 text-white hover:bg-bw-blue-500']")
@@ -124,6 +130,23 @@ class class_Locators:
     service_location_served = (By.XPATH,'//*[@id="html"]/body/main/div/div[6]/div/div[3]/div[5]/div/div/div/span/div/div/input')
     service_location_served_suggestion = (By.XPATH,"//label[text()='Salem, Tamil Nadu']")
     service_document_select = (By.XPATH, "//div[text()='--Select--']")
+
+    """Brand account locators"""
+    Brand_user_selection = (By.XPATH,"//div[text()='Brand']")
+    brand_city = (By.XPATH,'//*[@id="html"]/body/main/div/div[6]/div/div[6]/div[2]/div/div/div/input')
+    brand_city_suggestion = (By.XPATH,"//div[text()='Salem, Tamil Nadu']")
+    brand_location_served = (By.XPATH,"(//input[@type='text'])[10]")
+    brand_location_served_suggestion = (By.XPATH,"//label[text()='Chennai, Tamil Nadu']")
+    brand_address = (By.XPATH,"//input[@id='Address']")
+    brand_id_type_selection = (By.XPATH,"(//div[text()='Select...'])[3]")
+    brand_id_suggestion = (By.XPATH,"//p[text()='GST']")
+    brand_parent_company = (By.XPATH,"//input[@id='company*']")
+    brand_phone_number= (By.XPATH, "(//input[@type='text'])[5]")
+    brand_phone_number_submit = (By.XPATH, '//*[@id="radix-:rmj:"]/div[2]/button')
+    brand_document_verify_button = (By.CSS_SELECTOR,"body > main > div > div.container.px-4.lg\:px-9.lg\:max-w-5xl.mx-auto.shadow-400.lg\:mt-0.lg\:mb-20.lg\:rounded-xl.min-h-screen > div > div.md\:flex.w-full.justify-between.mb-2.gap-6 > section:nth-child(2) > div > div.relative > div > p")
+
+
+
 
 
 

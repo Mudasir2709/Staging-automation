@@ -10,6 +10,7 @@ from pynput.keyboard import Key, Controller
 import logging
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from send_mail import send_email
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -18,10 +19,11 @@ logger = logging.getLogger(__name__)
 class Test_logout:
     pass
 
-    def test_logout(self, user_account,caplog):
+    def test_logout(self, user_account,caplog,setup):
         """Performing logout"""
         with caplog.at_level(logging.INFO):
             try:
+                self.driver = setup
 
                 logging.info("Clicking on the logo menu")
                 profile_icon = WebDriverWait(self.driver, 10).until(BD.element_to_be_clickable(

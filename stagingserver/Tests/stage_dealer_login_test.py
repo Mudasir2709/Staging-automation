@@ -6,7 +6,6 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as BD
 from PIL import Image
-from pynput.keyboard import Key, Controller
 import logging
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from send_mail import send_email
