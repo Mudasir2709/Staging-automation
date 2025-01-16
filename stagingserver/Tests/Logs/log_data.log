@@ -1,11 +1,22 @@
-2025-01-10 17:26:38 INFO Entering email.
-2025-01-10 17:26:38 INFO Entering password.
-2025-01-10 17:26:38 INFO Clicking the submit button.
-2025-01-10 17:26:51 INFO Entering OTP into the boxes
-2025-01-10 17:26:54 INFO Entered OTP successfully - Testcase 1.5 is passed
-2025-01-10 17:26:59 INFO Clicking on the logo menu
-2025-01-10 17:27:02 INFO Successfully clicked on the logo - Testcase 1.1 is passed
-2025-01-10 17:27:02 INFO Clicking on the logout button
-2025-01-10 17:27:02 INFO Successfully clicked on the logout button
-2025-01-10 17:27:07 INFO Taking screenshot
-2025-01-10 17:27:07 INFO Tearing down the WebDriver.
+2025-01-16 17:36:20 INFO Entering email.
+2025-01-16 17:36:20 INFO Entering password.
+2025-01-16 17:36:20 INFO Clicking the submit button.
+2025-01-16 17:36:28 INFO Entering values in to the field
+2025-01-16 17:36:33 INFO Successfully logged in to the admin panel - Testcase 1.1 is passed
+2025-01-16 17:36:33 INFO Clicking on the product link 
+2025-01-16 17:36:33 INFO Successfully done - Testcase 1.2 is passed
+2025-01-16 17:36:33 INFO Clicking on the add product button 
+2025-01-16 17:36:34 INFO Successfully done - Testcase 1.3 is passed
+2025-01-16 17:36:34 INFO Selecting a brand
+2025-01-16 17:36:37 INFO Successfully done - Testcase 1.4 is passed
+2025-01-16 17:36:37 INFO Uploading a profile picture
+2025-01-16 17:36:44 INFO Successfully done - Testcase 1.5 is passed
+2025-01-16 17:36:44 INFO Entering value in the product name & product ID
+2025-01-16 17:36:46 INFO Successfully done - Testcase 1.6 is passed
+2025-01-16 17:36:46 INFO Selecting a product category
+2025-01-16 17:36:57 INFO Successfully done - Testcase 1.7 is passed
+2025-01-16 17:36:57 INFO Clicking on the price on request 
+2025-01-16 17:36:57 INFO Successfully done - Testcase 1.8 is passed
+2025-01-16 17:37:00 INFO Clicking on the submit button
+2025-01-16 17:37:05 INFO Successfully done - Testcase 1.9is passed
+2025-01-16 17:37:05 INFO Tearing down the WebDriver.

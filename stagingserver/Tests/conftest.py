@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as BD
 import logging
 import time
-from selenium.common.exceptions import NoSuchElementException,ElementNotInteractableException
+from selenium.common.exceptions import NoSuchElementException, ElementNotInteractableException
 from PIL import Image
 import os
 from selenium.webdriver.chrome.options import Options
@@ -31,13 +31,13 @@ def setup(request):
         email_field = WebDriverWait(driver, 10).until(
             BD.presence_of_element_located((By.XPATH, "//input[@id='Username']"))
         )
-        email_field.send_keys("buildingworld")
+        email_field.send_keys("BuildingWorld")
 
         logger.info("Entering password.")
         password_field = WebDriverWait(driver, 10).until(
             BD.presence_of_element_located((By.XPATH, "//input[@id='Password']"))
         )
-        password_field.send_keys("B2RaW")
+        password_field.send_keys("1234")
 
         logger.info("Clicking the submit button.")
         submit_button = WebDriverWait(driver, 10).until(
@@ -60,25 +60,26 @@ def setup(request):
 
 
 @pytest.fixture(scope='class')
-def user_account(request,setup):
+def user_account(request, setup):
     driver = setup
-    request.cls.driver = driver
-    profile_icon = WebDriverWait(driver,10).until(BD.element_to_be_clickable((By.XPATH,"(//img[@class='rounded-[100px] max-w-none w-[36px] h-[36px] object-cover'])[1]")))
+    profile_icon = WebDriverWait(driver, 10).until(BD.element_to_be_clickable(
+        (By.XPATH, "(//img[@class='rounded-[100px] max-w-none w-[36px] h-[36px] object-cover'])[1]")))
     profile_icon.click()
     time.sleep(3)
-    login_button = WebDriverWait(driver,10).until(BD.element_to_be_clickable((By.XPATH,"(//p[text()='Login'])[2]")))
+    login_button = WebDriverWait(driver, 10).until(BD.element_to_be_clickable((By.XPATH, "(//p[text()='Login'])[2]")))
     login_button.click()
     time.sleep(3)
 
 
 @pytest.fixture(scope="class")
-def users(request,setup):
+def users(setup):
     driver = setup
-    request.cls.driver = driver
-    profile_logos = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.XPATH,"//div[@id='wishlist']//div//div[contains(@class,'lg:mb-0 flex justify-center lg:flex-none lg:cursor-pointer')]//img[contains(@alt,'profile pic')]")))
+    profile_logos = WebDriverWait(driver, 10).until(BD.presence_of_element_located((By.XPATH,
+                                                                                    "//div[@id='wishlist']//div//div[contains(@class,'lg:mb-0 flex justify-center lg:flex-none lg:cursor-pointer')]//img[contains(@alt,'profile pic')]")))
     profile_logos.click()
     time.sleep(3)
-    logo_login = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.CSS_SELECTOR,"#wishlist > div > div > div:nth-child(2) > div.block > div > div > div.flex.flex-col.justify-between.text-bw-disabled-600 > div > div.flex.items-start.justify-center.col-span-5.flex-col.my-auto > div > div > p:nth-child(2)")))
+    logo_login = WebDriverWait(driver, 10).until(BD.presence_of_element_located((By.CSS_SELECTOR,
+                                                                                 "#wishlist > div > div > div:nth-child(2) > div.block > div > div > div.flex.flex-col.justify-between.text-bw-disabled-600 > div > div.flex.items-start.justify-center.col-span-5.flex-col.my-auto > div > div > p:nth-child(2)")))
     logo_login.click()
     time.sleep(3)
     # login_button = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.XPATH,"//p[text()='Login']")))
@@ -88,15 +89,17 @@ def users(request,setup):
 
 
 @pytest.fixture(scope="class")
-def otp_config(request, setup):
+def otp_config(setup):
     driver = setup
-    request.cls.driver = driver
     time.sleep(3)
-    log_with_otp_btn = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.CSS_SELECTOR,".text-base.text-zinc-500.cursor-pointer.select-none")))
+    log_with_otp_btn = WebDriverWait(driver, 10).until(
+        BD.presence_of_element_located((By.XPATH, "//a[text()='Login with OTP']")))
     log_with_otp_btn.click()
-    email_field = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.CSS_SELECTOR,"input[id='Phone Number or Email']")))
+    email_field = WebDriverWait(driver, 10).until(
+        BD.presence_of_element_located((By.CSS_SELECTOR, "input[id='Phone Number or Email']")))
     email_field.send_keys("testingbuildingworld@gmail.com")
-    get_otp = WebDriverWait(driver,10).until(BD.element_to_be_clickable((By.XPATH,"//button[normalize-space()='Get OTP']")))
+    get_otp = WebDriverWait(driver, 10).until(
+        BD.element_to_be_clickable((By.XPATH, "//button[normalize-space()='Get OTP']")))
     get_otp.click()
 
     logging.info("Entering OTP into the boxes")
@@ -115,22 +118,24 @@ def otp_config(request, setup):
     time.sleep(2)
     logging.info("Entered OTP successfully - Testcase 1.5 is passed")
 
-    Verify_btn = WebDriverWait(driver,10).until(BD.element_to_be_clickable((By.XPATH,
-                                                                            "//button[normalize-space()='Verify']")))
+    Verify_btn = WebDriverWait(driver, 10).until(BD.element_to_be_clickable((By.XPATH,
+                                                                             "//button[normalize-space()='Verify']")))
     Verify_btn.click()
     time.sleep(5)
 
 
 @pytest.fixture(scope="function")
-def otp_config_for_service(request, setup, caplog):
+def otp_config_for_service(setup, caplog):
     driver = setup
-    request.cls.driver = driver
     time.sleep(3)
-    log_with_otp_btn = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.CSS_SELECTOR,".text-base.text-zinc-500.cursor-pointer.select-none")))
+    log_with_otp_btn = WebDriverWait(driver, 10).until(
+        BD.presence_of_element_located((By.XPATH, "//a[text()='Login with OTP']")))
     log_with_otp_btn.click()
-    email_field = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.CSS_SELECTOR,"input[id='Phone Number or Email']")))
+    email_field = WebDriverWait(driver, 10).until(
+        BD.presence_of_element_located((By.CSS_SELECTOR, "input[id='Phone Number or Email']")))
     email_field.send_keys("testingserviceprovider@yopmail.com")
-    get_otp = WebDriverWait(driver,10).until(BD.element_to_be_clickable((By.XPATH,"//button[normalize-space()='Get OTP']")))
+    get_otp = WebDriverWait(driver, 10).until(
+        BD.element_to_be_clickable((By.XPATH, "//button[normalize-space()='Get OTP']")))
     get_otp.click()
 
     logging.info("Entering OTP into the boxes")
@@ -149,22 +154,24 @@ def otp_config_for_service(request, setup, caplog):
     time.sleep(2)
     logging.info("Entered OTP successfully - Testcase 1.5 is passed")
 
-    verify_btn = WebDriverWait(driver,10).until(BD.element_to_be_clickable((By.XPATH,
-                                                                            "//button[normalize-space()='Verify']")))
+    verify_btn = WebDriverWait(driver, 10).until(BD.element_to_be_clickable((By.XPATH,
+                                                                             "//button[normalize-space()='Verify']")))
     verify_btn.click()
     time.sleep(5)
 
 
 @pytest.fixture(scope="function")
-def otp_config_for_dealer(request, setup, caplog):
+def otp_config_for_dealer(setup, caplog):
     driver = setup
-    request.cls.driver = driver
     time.sleep(3)
-    log_with_otp_btn = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.CSS_SELECTOR,".text-base.text-zinc-500.cursor-pointer.select-none")))
+    log_with_otp_btn = WebDriverWait(driver, 10).until(
+        BD.presence_of_element_located((By.XPATH, "//a[text()='Login with OTP']")))
     log_with_otp_btn.click()
-    email_field = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.CSS_SELECTOR,"input[id='Phone Number or Email']")))
+    email_field = WebDriverWait(driver, 10).until(
+        BD.presence_of_element_located((By.CSS_SELECTOR, "input[id='Phone Number or Email']")))
     email_field.send_keys("testingdealer@yopmail.com")
-    get_otp = WebDriverWait(driver,10).until(BD.element_to_be_clickable((By.XPATH,"//button[normalize-space()='Get OTP']")))
+    get_otp = WebDriverWait(driver, 10).until(
+        BD.element_to_be_clickable((By.XPATH, "//button[normalize-space()='Get OTP']")))
     get_otp.click()
 
     logging.info("Entering OTP into the boxes")
@@ -183,21 +190,19 @@ def otp_config_for_dealer(request, setup, caplog):
     time.sleep(2)
     logging.info("Entered OTP successfully - Testcase 1.5 is passed")
 
-    verify_btn = WebDriverWait(driver,10).until(BD.element_to_be_clickable((By.XPATH,
-                                                                            "//button[normalize-space()='Verify']")))
+    verify_btn = WebDriverWait(driver, 10).until(BD.element_to_be_clickable((By.XPATH,
+                                                                             "//button[normalize-space()='Verify']")))
     verify_btn.click()
     time.sleep(5)
 
 
-# @pytest.fixture(scope="function")
-# def screen_shot(request, setup, caplog):
-#     request = setup
-#     folder_path = r"C:/Users/muduu/OneDrive/Desktop/Git chnages/Staging-automation/stagingserver/Tests/screenshots"
-#     screenshot_path = os.path.join(folder_path, "payment.png")
-#     showing = Image.open(screenshot_path)
-#     showing.show()
-
-
+@pytest.fixture(scope='function')
+def admin_setup(setup,caplog):
+    driver = setup
+    driver.execute_script("window.open('https://fedstage.buildingworld.com/admin/login','_blank');")
+    time.sleep(2)
+    driver.switch_to.window(driver.window_handles[1])
+    time.sleep(3)
 
 
 

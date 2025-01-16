@@ -41,17 +41,28 @@ def java_send_keys(driver, Locator, text):
     driver.execute_script("arguments[0].value = arguments[1];",element,text)
 
 
-
 def send_keys(driver, Locator,text):
     element = WebDriverWait(driver,10).until(BD.presence_of_element_located(Locator))
     element.send_keys(text)
 
 
-def move_element(driver, locator ):
+def move_element(driver, locator):
     element = WebDriverWait(driver,10).until(BD.presence_of_element_located(locator))
     action_chain = ActionChains(driver)
     action_chain.move_to_element(element)
     action_chain.perform()
+
+
+def screenshot(driver, file_path, file_name):
+    screenshot_path = os.path.join(file_path, file_name)
+    driver.save_screenshot(screenshot_path)
+    showing = Image.open(screenshot_path)
+    showing.show()
+    send_email()
+
+
+
+
 
 
 

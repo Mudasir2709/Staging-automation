@@ -8,7 +8,6 @@ class class_Locators:
 
     "Login link"
     login_link = (By.XPATH,'(//p[text()="Login"])[2]')
-    login_with_otp = (By.CSS_SELECTOR,".text-base.text-zinc-500.cursor-pointer.select-none")
     login_email_or_phone_number = (By.XPATH,"//input[@name='Phone Number or Email']")
     login_get_otp_button = (By.XPATH,"//button[normalize-space()='Get OTP']")
 
@@ -29,6 +28,26 @@ class class_Locators:
     admin_pass = (By.XPATH,"//input[@id='password']")
     admin_submit = (By.XPATH,"//span[text()='Login']")
     videos_tab = (By.XPATH,"//p[text()='Videos']")
+
+    """Admin side products locators"""
+    admin_product_tab = (By.XPATH,"//p[text()='Products']")
+    admin_add_product = (By.XPATH,"//div[text()='Add product']")
+    admin_brand_search =(By.XPATH,"//input[@placeholder='Search brand']")
+    admin_brand_suggestion = (By.XPATH,"//div[text()='Hindustan Alcox Limited']")
+    admin_product_browse = (By.XPATH,"//span[text()='browse']")
+    admin_product_name = (By.XPATH,"(//input[@id='pNumber'])[1]")
+    admin_product_id = (By.XPATH,"(//input[@id='pNumber'])[2]")
+    admin_product_category = (By.XPATH,"/html/body/div[1]/div/section[2]/div[2]/div/div[2]/div/div[5]/section[1]/div/span[2]/img")
+    admin_product_L1 = (By.XPATH,"//span[text()='Access & Security']")
+    admin_product_L2 = (By.XPATH, "//span[text()='Access Ladders']")
+    admin_product_l3_select = (By.XPATH,"(//div[text()='--Select--'])[1]")
+    admin_product_l3_click = (By.XPATH,"//p[text()='Electrical Loft Ladders']")
+    admin_price_on_request = (By.XPATH,"//input[@value='3']")
+
+
+
+
+
     created_video = (By.XPATH,"//p[@title='remove']")
     approve_button = (By.CSS_SELECTOR,r"body > div:nth-child(8) > div > section.block.md\:block.w-full.h-full.md\:w-4\5 > div.pb-2 > div:nth-child(1) > div.h-20 > section > div.w-3\/12.flex.items-center.justify-end > div > div > button")
 
@@ -45,6 +64,7 @@ class class_Locators:
 
     """Building world logo locators """
     building_world = (By.XPATH, "(//p[text()='BuildingWorld'])[1]")
+    service_profile_icon = (By.CSS_SELECTOR,r"#wishlist > div > div > div.relative.lg\:mt-0.lg\:mb-0.flex.justify-center.lg\:flex-none.lg\:cursor-pointer > div.flex.flex-col.items-center > p")
 
     idea_section = (By.XPATH, "(//p[text()='Residential'])[1]")
 
@@ -72,6 +92,7 @@ class class_Locators:
 
     """Sign up Locator"""
     sign_up = (By.XPATH,"(//p[text()='Sign Up'])[2]")
+    login_with_otp = (By.XPATH,"//a[text()='Login with OTP']")
 
     """Sign up locators"""
     sign_up_email_field = (By.XPATH,"//input[@id='Phone Number or Email']")
@@ -97,6 +118,7 @@ class class_Locators:
     check_box = (By.XPATH,"//input[@id='terms']")
     password_verify_submit = (By.XPATH,"(//span[text()='Submit'])[2]")
     user_submit = (By.XPATH,"//span[text()='Submit']")
+    end_user_logo = (By.XPATH,'//*[@id="wishlist"]/div/div/div[1]/div[1]/img')
 
     """Dealer user locator"""
     user_selection2 = (By.XPATH, "//div[text()='Dealer / Store']")
@@ -109,6 +131,7 @@ class class_Locators:
     document_verify_submit = (By.XPATH,"(//span[text()='Submit'])[2]")
     dealer_browse = (By.XPATH,"(//span[text()='Browse'])[2]")
     dealer_submit = (By.XPATH,"//*[@id='html']/body/main/div/div[6]/div/div[12]/button")
+    dealer_profile_icon = (By.XPATH,"(//p[text()='Dealer / Store'])[2]")
 
     """Service account locators"""
     user_selection3 = (By.XPATH,"//div[text()='Service']")
@@ -123,13 +146,14 @@ class class_Locators:
     service_document_verify_submit = (By.XPATH,"(//span[text()='Submit'])")
     service_document_browse = (By.XPATH,"(//span[text()='Browse'])[3]")
     service_continue = (By.XPATH,"//span[text()='Continue']")
-    service_types_of_service = (By.CSS_SELECTOR,"body > main > div > div.container.px-4.lg\:px-9.lg\:max-w-5xl.mx-auto.shadow-400.lg\:mt-0.lg\:mb-20.lg\:rounded-xl.min-h-screen > div > div:nth-child(3) > div:nth-child(2) > div > div > div > div > img")
+    service_types_of_service = (By.CSS_SELECTOR,r"body > main > div > div.container.px-4.lg\:px-9.lg\:max-w-5xl.mx-auto.shadow-400.lg\:mt-0.lg\:mb-20.lg\:rounded-xl.min-h-screen > div > div:nth-child(3) > div:nth-child(2) > div > div > div > div > img")
     service_type_of_service_suggestion = (By.XPATH,"//span[text()='Civil Engineers']")
     service_specialization = (By.XPATH, '//*[@id="html"]/body/main/div/div[6]/div/div[3]/div[3]/div/div/div/div')
     service_specialization_suggestion = (By.XPATH,"//span[text()='Commercial']")
     service_location_served = (By.XPATH,'//*[@id="html"]/body/main/div/div[6]/div/div[3]/div[5]/div/div/div/span/div/div/input')
     service_location_served_suggestion = (By.XPATH,"//label[text()='Salem, Tamil Nadu']")
     service_document_select = (By.XPATH, "//div[text()='--Select--']")
+    service_logout = (By.XPATH,"(//div[text()='Logout'])[1]")
 
     """Brand account locators"""
     Brand_user_selection = (By.XPATH,"//div[text()='Brand']")
@@ -143,7 +167,8 @@ class class_Locators:
     brand_parent_company = (By.XPATH,"//input[@id='company*']")
     brand_phone_number= (By.XPATH, "(//input[@type='text'])[5]")
     brand_phone_number_submit = (By.XPATH, '//*[@id="radix-:rmj:"]/div[2]/button')
-    brand_document_verify_button = (By.CSS_SELECTOR,"body > main > div > div.container.px-4.lg\:px-9.lg\:max-w-5xl.mx-auto.shadow-400.lg\:mt-0.lg\:mb-20.lg\:rounded-xl.min-h-screen > div > div.md\:flex.w-full.justify-between.mb-2.gap-6 > section:nth-child(2) > div > div.relative > div > p")
+    brand_document_verify_button = (By.CSS_SELECTOR,r"body > main > div > div.container.px-4.lg\:px-9.lg\:max-w-5xl.mx-auto.shadow-400.lg\:mt-0.lg\:mb-20.lg\:rounded-xl.min-h-screen > div > div.md\:flex.w-full.justify-between.mb-2.gap-6 > section:nth-child(2) > div > div.relative > div > p")
+
 
 
 
