@@ -61,6 +61,12 @@ def screenshot(driver, file_path, file_name):
     send_email()
 
 
+def is_element_displayed(driver, locator):
+
+    element = WebDriverWait(driver,10).until((BD.presence_of_element_located(locator)))
+    return element.is_displayed()
+
+
 
 
 

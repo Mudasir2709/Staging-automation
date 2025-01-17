@@ -81,9 +81,6 @@ def users(setup):
     logo_login = WebDriverWait(driver, 10).until(BD.presence_of_element_located((By.CSS_SELECTOR,
                                                                                  "#wishlist > div > div > div:nth-child(2) > div.block > div > div > div.flex.flex-col.justify-between.text-bw-disabled-600 > div > div.flex.items-start.justify-center.col-span-5.flex-col.my-auto > div > div > p:nth-child(2)")))
     logo_login.click()
-    time.sleep(3)
-    # login_button = WebDriverWait(driver,10).until(BD.presence_of_element_located((By.XPATH,"//p[text()='Login']")))
-    # login_button.click()
     yield driver
     driver.quit()
 
@@ -197,13 +194,9 @@ def otp_config_for_dealer(setup, caplog):
 
 
 @pytest.fixture(scope='function')
-def admin_setup(setup,caplog):
+def admin_setup(setup, caplog):
     driver = setup
     driver.execute_script("window.open('https://fedstage.buildingworld.com/admin/login','_blank');")
     time.sleep(2)
     driver.switch_to.window(driver.window_handles[1])
     time.sleep(3)
-
-
-
-

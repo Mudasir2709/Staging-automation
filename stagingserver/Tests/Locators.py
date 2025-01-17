@@ -169,6 +169,24 @@ class class_Locators:
     brand_phone_number_submit = (By.XPATH, '//*[@id="radix-:rmj:"]/div[2]/button')
     brand_document_verify_button = (By.CSS_SELECTOR,r"body > main > div > div.container.px-4.lg\:px-9.lg\:max-w-5xl.mx-auto.shadow-400.lg\:mt-0.lg\:mb-20.lg\:rounded-xl.min-h-screen > div > div.md\:flex.w-full.justify-between.mb-2.gap-6 > section:nth-child(2) > div > div.relative > div > p")
 
+    """Admin idea locators"""
+    admin_idea_link = (By.XPATH,"//p[text()='Ideas']")
+    admin_add_idea = (By.XPATH,"//div[text()='Add new idea']")
+    admin_idea_image_browse = (By.XPATH, "//span[text()=' browse']")
+    admin_idea_image_continue = (By.XPATH,"//span[text()='Continue']")
+    admin_idea_image_done = (By .XPATH,"//span[text()='Done']")
+    admin_idea_id = (By.XPATH, "(//input[@id='title'])[1]")
+    admin_idea_name = (By.XPATH, "(//input[@id='title'])[2]")
+    admin_idea_location = (By.XPATH, "(//input[@type='text'])[3]")
+    admin_idea_location_suggestion = (By.XPATH, "//div[text()='Salem, Tamil Nadu']")
+    admin_idea_classification = (By.XPATH, "/html/body/div[1]/div/section[2]/div[2]/div/div[2]/div/section[1]/div[2]/div[2]/section[1]/div[1]/span[2]/img")
+    admin_idea_l1 = (By.XPATH, "//span[text()='Commercial']")
+    admin_idea_l2 = (By.XPATH, "//span[text()='Commercial Building']")
+    admin_idea_iconic_unique = (By.XPATH, "//p[text()='YES']")
+    admin_idea_description = (By.XPATH,"(//textarea[@name='remarks'])[1]")
+
+
+
 
 
 

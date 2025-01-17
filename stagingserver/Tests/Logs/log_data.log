@@ -1,22 +1,24 @@
-2025-01-16 17:36:20 INFO Entering email.
-2025-01-16 17:36:20 INFO Entering password.
-2025-01-16 17:36:20 INFO Clicking the submit button.
-2025-01-16 17:36:28 INFO Entering values in to the field
-2025-01-16 17:36:33 INFO Successfully logged in to the admin panel - Testcase 1.1 is passed
-2025-01-16 17:36:33 INFO Clicking on the product link 
-2025-01-16 17:36:33 INFO Successfully done - Testcase 1.2 is passed
-2025-01-16 17:36:33 INFO Clicking on the add product button 
-2025-01-16 17:36:34 INFO Successfully done - Testcase 1.3 is passed
-2025-01-16 17:36:34 INFO Selecting a brand
-2025-01-16 17:36:37 INFO Successfully done - Testcase 1.4 is passed
-2025-01-16 17:36:37 INFO Uploading a profile picture
-2025-01-16 17:36:44 INFO Successfully done - Testcase 1.5 is passed
-2025-01-16 17:36:44 INFO Entering value in the product name & product ID
-2025-01-16 17:36:46 INFO Successfully done - Testcase 1.6 is passed
-2025-01-16 17:36:46 INFO Selecting a product category
-2025-01-16 17:36:57 INFO Successfully done - Testcase 1.7 is passed
-2025-01-16 17:36:57 INFO Clicking on the price on request 
-2025-01-16 17:36:57 INFO Successfully done - Testcase 1.8 is passed
-2025-01-16 17:37:00 INFO Clicking on the submit button
-2025-01-16 17:37:05 INFO Successfully done - Testcase 1.9is passed
-2025-01-16 17:37:05 INFO Tearing down the WebDriver.
+2025-01-17 17:52:12 INFO Entering email.
+2025-01-17 17:52:12 INFO Entering password.
+2025-01-17 17:52:12 INFO Clicking the submit button.
+2025-01-17 17:52:20 INFO Entering values in to the field
+2025-01-17 17:52:25 INFO Successfully logged in to the admin panel - Testcase 1.1 is passed
+2025-01-17 17:52:25 INFO Clicking on the ideas link 
+2025-01-17 17:52:25 INFO Successfully done - Testcase 1.2 is passed
+2025-01-17 17:52:25 INFO Clicking on the add idea button 
+2025-01-17 17:52:26 INFO Successfully done - Testcase 1.3 is passed
+2025-01-17 17:52:26 INFO Uploading a image
+2025-01-17 17:52:30 INFO Successfully done - Testcase 1.4 is passed
+2025-01-17 17:52:31 INFO Entering values in the ID & name field
+2025-01-17 17:52:33 INFO Successfully done - Testcase 1.5 is passed
+2025-01-17 17:52:33 INFO Selecting a location
+2025-01-17 17:52:36 INFO Successfully done - Testcase 1.6 is passed
+2025-01-17 17:52:36 INFO Selecting a idea category
+2025-01-17 17:52:40 INFO Successfully done - Testcase 1.7 is passed
+2025-01-17 17:52:40 INFO Entering values in the description field
+2025-01-17 17:52:40 INFO Successfully done - Testcase 1.8 is passed
+2025-01-17 17:52:40 INFO Clicking on the iconic projects
+2025-01-17 17:52:40 INFO Successfully done - Testcase 1.9 is passed
+2025-01-17 17:52:43 INFO Clicking on the submit button
+2025-01-17 17:52:48 INFO Successfully done - Testcase 1.10is passed
+2025-01-17 17:52:52 INFO Tearing down the WebDriver.
